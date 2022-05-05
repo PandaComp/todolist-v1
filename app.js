@@ -6,7 +6,14 @@ const bodyParser = require("body-parser")
 const app = express()
 
 app.get("/", (req, res) => {
-    res.send("hello")
+    const today = new Date()
+    const time = new Date()
+    if ((today.getDay === 6 || today.getDay === 0) || (time.getHours <= 9 && time.getHours >= 17)) {
+        res.send("Closed")
+    } else {
+        res.send("Open")
+    }
+       
 })
 
 app.listen(3000, ()=>{
