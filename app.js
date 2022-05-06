@@ -8,8 +8,7 @@ const x = new Date()
 console.log(x.getHours())
 app.get("/", (req, res) => {
     const today = new Date()
-    const time = new Date()
-    if ((today.getDay() === 6 || today.getDay() === 0) || (time.getHours() <= 9 || time.getHours() >= 17)) {
+    if ((today.getDay() === 6 || today.getDay() === 0) || (today.getHours() <= 9 || today.getHours() >= 17)) {
         res.send("Closed")
     } else {
         res.send("Open")
