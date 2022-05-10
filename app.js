@@ -7,6 +7,7 @@ let ejs = require('ejs')
 const app = express()
 
 const today = new Date().getDay()
+
 let day = '';
 switch(today) {
     case 0 :
@@ -37,7 +38,7 @@ console.log(day)
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res)=>{
-    res.render('lists', {aWeekDay : "hello"})
+    res.render('lists', {aWeekDay : day})
 })
 
 app.listen(3000, ()=>{

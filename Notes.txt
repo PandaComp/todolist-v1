@@ -1,4 +1,0 @@
-EJS (Embedded Javascript Templating)
-
-If have to sendFile() a different page for each day of the week it'll be inefficient to send 7 different html files.
-In the case of todolist, it's a separate page for each list.
